@@ -1,0 +1,26 @@
+<h1 style="color:purple;">하 루 의 기 억 들</h1>
+<h2>당신의 기억들, 여기에 담기</h2>
+<a href = "/home/new">기억 새기러 가기 </a>
+
+<br><br>
+
+<% @posts.each do |x| %>
+    <%= x.id%> 번 기억 :
+    <br>
+    제목 : <%= x.title%> 
+    <br>
+    내용: <%= x.content%> 
+    <br>
+    <a href= "home/show/<%=x.id%>"> 들어가보기 </a>
+    <br>
+    <a href= "home/destroy/<%=x.id%>">지우기</a>
+    <br>
+    <a href="home/edit/<%=x.id%>">기억 수정</a>
+    <br>
+    ----------------------------------
+    <br>
+    
+
+<%end%>
+<br>
+
